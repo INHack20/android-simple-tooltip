@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "io.github.douglasjunior.androidSimpleTooltip.sample"
         minSdkVersion 14
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 1
         versionName "0.0.1"
     }
@@ -16,6 +16,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    namespace 'io.github.douglasjunior.androidSimpleTooltip.sample'
 }
 
 dependencies {

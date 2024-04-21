@@ -1,8 +1,7 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.github.douglasjunior.androidSimpleTooltip">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-        android:supportsRtl="true">
+        android:supportsRtl="true" android:exported="false">
     </application>
 
 </manifest>
