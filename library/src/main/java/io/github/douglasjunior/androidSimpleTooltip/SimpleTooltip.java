@@ -58,6 +58,7 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.IdRes;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.StringRes;
+import androidx.cardview.widget.CardView;
 
 
 /**
@@ -630,11 +631,20 @@ public class SimpleTooltip implements PopupWindow.OnDismissListener {
                 textColor = SimpleTooltipUtils.getColor(context, mDefaultTextColorRes);
             }
             if (contentView == null) {
-                TextView tv = new TextView(context);
+
+                CardView customView = (CardView)View.inflate(context,R.layout.tooltip_view,null);
+                int paddingCard = 20;
+                customView.setRadius(20);
+                customView.setContentPadding(paddingCard,paddingCard,paddingCard,paddingCard);
+                customView.setCardBackgroundColor(backgroundColor);
+                textViewId = R.id.tv_text_custom;
+
+                TextView tv = (TextView)customView.getChildAt(0);
+                //TextView tv = new TextView(context);
                 SimpleTooltipUtils.setTextAppearance(tv, mDefaultTextAppearanceRes);
-                tv.setBackgroundColor(backgroundColor);
+                //tv.setBackgroundColor(backgroundColor);
                 tv.setTextColor(textColor);
-                contentView = tv;
+                contentView = customView;
             }
             if (arrowColor == 0) {
                 arrowColor = SimpleTooltipUtils.getColor(context, mDefaultArrowColorRes);

@@ -30,6 +30,7 @@ buildscript {
 
 dependencies {
     api 'androidx.annotation:annotation:1.7.1'
+    implementation "androidx.cardview:cardview:1.0.0"
 }
 
 // build a jar with source files
