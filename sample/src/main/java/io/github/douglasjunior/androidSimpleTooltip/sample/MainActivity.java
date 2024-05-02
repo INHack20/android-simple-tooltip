@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v.getId() == R.id.btn_simple) {
             new SimpleTooltip.Builder(this)
                     .anchorView(v)
-                    .text(R.string.btn_simple)
+                    .text("is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since ")
                     .gravity(Gravity.END)
                     .build()
                     .show();
