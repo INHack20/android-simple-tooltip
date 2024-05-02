@@ -3,7 +3,7 @@ apply plugin: 'com.android.library'
 group = 'com.github.douglasjunior'
 
 android {
-    compileSdkVersion 33
+    compileSdk 33
 
     defaultConfig {
         minSdkVersion 14
