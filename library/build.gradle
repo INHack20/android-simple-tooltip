@@ -37,7 +37,7 @@ dependencies {
 task sourcesJar(type: Jar) {
     //noinspection GroovyAssignabilityCheck
     from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
+    archiveClassifier = 'sources'
 }
 
 task javadoc(type: Javadoc) {
@@ -49,7 +49,7 @@ task javadoc(type: Javadoc) {
 
 // build a jar with javadoc
 task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
+    archiveClassifier = 'javadoc'
     from javadoc.destinationDir
 }
 
