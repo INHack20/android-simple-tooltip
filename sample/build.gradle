@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "io.github.douglasjunior.androidSimpleTooltip.sample"
         minSdkVersion 14
-        targetSdkVersion 33
+        targetSdk 34
         versionCode 1
         versionName "0.0.1"
     }
